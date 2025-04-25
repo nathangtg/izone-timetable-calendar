@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Sunway Timetable to Calendar",
+    "version": "1.0",
+    "description": "Convert Sunway University timetable to iCalendar format",
+    "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "downloads"
+    ],    
+    "host_permissions": ["*://izone.sunway.edu.my/*"],
+        "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.jpeg"
+        }
+    },
+    "icons": {
+      "16": "icons/icon16.jpeg"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://izone.sunway.edu.my/timetable*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }

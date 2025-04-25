@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sunway Timetable to Calendar</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 0;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #333;
+    }
+    
+    .header {
+      background-color: #003366; 
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 3px solid #DAA520;
+    }
+    
+    h1 {
+      font-size: 16px;
+      margin: 0;
+      font-weight: 600;
+    }
+    
+    .content {
+      padding: 15px;
+    }
+    
+    .info {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    
+    button {
+      background-color: #DAA520; 
+      color: #003366; 
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      width: 100%;
+      margin-top: 10px;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    
+    button:hover {
+      background-color: #c89b20; 
+    }
+    
+    #status {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+      padding: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Sunway Timetable to Calendar</h1>
+  </div>
+  
+  <div class="content">
+    <div class="info">
+      This extension converts your Sunway University timetable to an iCalendar (.ics) file that can be imported into calendar applications.
+    </div>
+    
+    <button id="convertBtn">Convert Timetable</button>
+    <div id="status"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
