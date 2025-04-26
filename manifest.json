@@ -1,29 +1,40 @@
 {
-    "manifest_version": 3,
-    "name": "Sunway Timetable to Calendar",
-    "version": "1.0",
-    "description": "Convert Sunway University timetable to iCalendar format",
-    "permissions": [
-    "tabs",
-    "scripting",
+  "manifest_version": 3,
+  "name": "Sunway Timetable to Calendar",
+  "version": "1.0.0",
+  "description": "Convert your Sunway University timetable into an iCalendar (.ics) file for Google Calendar, Apple Calendar, and others.",
+  "author": "Nathan Aldyth Prananta Ginting",
+  "license": "MIT",
+  "permissions": [
     "activeTab",
+    "scripting",
     "downloads"
-    ],    
-    "host_permissions": ["*://izone.sunway.edu.my/*"],
-        "action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "icons/icon16.jpeg"
-        }
-    },
-    "icons": {
-      "16": "icons/icon16.jpeg"
-    },
-    "content_scripts": [
-      {
-        "matches": ["*://izone.sunway.edu.my/timetable*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ]
-  }
+  ],
+  "host_permissions": [
+    "https://izone.sunway.edu.my/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.jpeg",
+    "32": "icons/icon16.jpeg",
+    "48": "icons/icon16.jpeg",
+    "128": "icons/icon16.jpeg"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.jpeg",
+      "32": "icons/icon16.jpeg",
+      "48": "icons/icon16.jpeg",
+      "128": "icons/icon16.jpeg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://izone.sunway.edu.my/timetable*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
