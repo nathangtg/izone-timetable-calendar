@@ -3,7 +3,7 @@
   "name": "Sunway Timetable to Calendar",
   "version": "1.0.0",
   "description": "Convert your Sunway University timetable into an iCalendar (.ics) file for Google Calendar, Apple Calendar, and others.",
-  "author": "Nathan Aldyth Prananta Ginting",
+  "author": "Nathan G.",
   "license": "MIT",
   "permissions": [
     "activeTab",
